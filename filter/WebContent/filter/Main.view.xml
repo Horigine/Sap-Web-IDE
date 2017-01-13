@@ -1,0 +1,66 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="filter.Main" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	
+	<Table items="{/Record}" id="tab_IDD">
+	
+    <headerToolbar>
+    
+     <Toolbar>
+      <Label id="label_IDD" design="Bold" />
+      <ToolbarSpacer />
+      
+      
+      <SegmentedButton width="50%" id="segmented_IDDD"
+       select="Handle_Click_Segmented">
+       
+       <items>
+        <SegmentedButtonItem text="Kids" key="kids" />
+        <SegmentedButtonItem text="Adults" key="adults" />
+        <SegmentedButtonItem text="Seniors" key="seniors" />
+       </items>
+       
+       
+      </SegmentedButton>
+      <ToolbarSpacer />
+      <ToggleButton text="Filter" press="onFilter_Butt"
+       type="Emphasized" id="toggle_ID" />
+       
+       
+     </Toolbar>
+    </headerToolbar>
+    
+    
+    <columns>
+     <Column visible="false">
+      <Text design="bold" text="Category" />
+     </Column>
+     <Column>
+      <Text design="bold" text="Name" />
+     </Column>
+     <Column>
+      <Text design="bold" text="Age" />
+     </Column>
+     <Column>
+      <Text design="bold" text="Mobile" />
+     </Column>
+     <Column>
+      <Text design="bold" text="Town" />
+     </Column>
+    </columns>
+    
+    
+    <ColumnListItem>
+     <cells>
+      <Text text="{recog}" />
+      <Text text="{name}" />
+      <Text text="{age}" />
+      <Text text="{mob}" />
+      <Text text="{town}" />
+     </cells>
+    </ColumnListItem>
+   </Table>
+		</content>
+	</Page>
+</core:View>
